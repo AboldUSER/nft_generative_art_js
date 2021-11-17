@@ -1,1 +1,6 @@
 node_modules
+./images
+./metadata
+imagesHashes.csv
+imageTraits.csv
+rarity.csv

@@ -12,6 +12,12 @@ const traitNames = fs.readFileSync('tnames.dat').toString().trim().split(/\s+/)
 
 function run() {
 
+    const dirExists = fs.statSync('./metadata',{throwIfNoEntry: false} )
+    
+    if (!dirExists) {
+        fs.mkdirSync('./metadata')
+      }
+
     const csvData = []
     let lbreak = attData.split("\n")
     lbreak.forEach(res => {

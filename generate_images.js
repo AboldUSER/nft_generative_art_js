@@ -64,6 +64,12 @@ const generateRarityTable = (_traitNames, _nftAttributes, _traitsAndWeights) => 
 
 const generateImages = (_traitNames, _nftAttributes) => {
     let imgCounter = 1
+    
+    const dirExists = fs.statSync('./images',{throwIfNoEntry: false} )
+    
+    if (!dirExists) {
+        fs.mkdirSync('./images')
+      }
 
     _nftAttributes.forEach(async element => {
         const arr = []
