@@ -1,4 +1,5 @@
-#NFT Generative Art JS
+# NFT Generative Art JS
+
 This is a javascript/node script for creating generative art.
 
 Sample traits, weights, and layer images are already provided.
