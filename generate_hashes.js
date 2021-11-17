@@ -3,15 +3,14 @@ const sha256 = require('js-sha256')
 const dir = './images'
 const hrstart = process.hrtime()
 
-const generateHashes = () => {
-    
+function run() {
     let files = fs.readdirSync(dir)
     imgNum = files.length
 
-    if(files.length == 0) {
+    if (files.length == 0) {
         throw new Error('No images. Run generate_images.js first.');
     }
-    
+
     let provenance = ''
     const header = 'Image #,Hash' + '\n'
     let csv = header
@@ -26,6 +25,6 @@ const generateHashes = () => {
     fs.writeFileSync('imageHashes.csv', csv)
 }
 
-generateHashes()
+run()
 const hrend = process.hrtime(hrstart)
 console.info('Generated Hashes (imageHashes.csv). Execution time (hr): %ds %dms', hrend[0], hrend[1] / 1000000)

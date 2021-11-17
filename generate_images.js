@@ -85,7 +85,6 @@ const generateImages = (_traitNames, _nftAttributes) => {
                 imgCounter += 1
             })
     })
-
 }
 
 function run() {

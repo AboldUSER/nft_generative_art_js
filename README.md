@@ -10,3 +10,5 @@ To run:
     - Note that the number of images has to be equal to or less than the total number of unique image combinations.
 - Third, run the generate_images.js script.
 - Fourth, run the generate_hashes.js script.
+- Fifth, update the following variables in the generate_metadata.js script to align with your project: `metadataDescription`, `metadataName`, `metadataImageStorageHash`.
+- Sixth, run the generate_metadata.js.script
