@@ -1,0 +1,19 @@
+{
+  "name": "my-own",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate_images": "node generate_images.js",
+    "generate_hashes": "node generate_hashes.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.8.0",
+    "js-sha256": "^0.9.0",
+    "merge-images": "^2.0.0",
+    "sha256": "^0.2.0",
+    "weighted": "^0.3.0"
+  }
+}
