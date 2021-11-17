@@ -17,3 +17,4 @@ To run with your own assets:
 - Replace the existing traits folders with your art layers, with the bottom layer in folder `trait1`, next layer in folder `trait2` and so on. The image files should be in alphabetical order inside the folders.
 - Replace the trait names in the file `tnames.dat` with your trait names, starting with the bottom layer first.
 - Replace the trait weights in the file `weights.dat` with your trait weights, starting with the bottom layer and then aligning with the same order (alphabetical) as the images in their respective trait folders.
+- Then follow the same steps as above.
