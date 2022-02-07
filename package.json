@@ -1,18 +1,19 @@
 {
   "name": "nft-generative-art-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scripts to create everything needed for NFT generative art",
   "scripts": {
-    "generate_images": "node generate_images.js",
-    "generate_hashes": "node generate_hashes.js",
-    "generate_metadata": "node generate_metadata.js"
+    "generate:traits": "node generate_traits.js",
+    "generate:images": "node generate_images.js",
+    "generate:hashes": "node generate_hashes.js",
+    "generate:metadata": "node generate_metadata.js"
   },
   "author": "Martin Sterlicchi",
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.8.0",
+    "csv-parse": "^5.0.4",
     "js-sha256": "^0.9.0",
-    "merge-images": "^2.0.0",
     "sha256": "^0.2.0",
     "weighted": "^0.3.0"
   }

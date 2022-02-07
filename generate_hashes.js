@@ -3,6 +3,10 @@ const sha256 = require('js-sha256')
 const dir = './images'
 const hrstart = process.hrtime()
 
+/* 
+* @dev generates a hash of each image and then a 'provenance' hash of all image hashes
+*/
+
 function run() {
     let files = fs.readdirSync(dir)
     imgNum = files.length
@@ -23,8 +27,8 @@ function run() {
     provenance = sha256(JSON.stringify(provenance))
     csv += 'provenance' + ',' + provenance
     fs.writeFileSync('imageHashes.csv', csv)
+    const hrend = process.hrtime(hrstart)
+    console.info('Generated Hashes (imageHashes.csv). Execution time (hr): %ds %dms', hrend[0], hrend[1] / 1000000)
 }
 
 run()
-const hrend = process.hrtime(hrstart)
-console.info('Generated Hashes (imageHashes.csv). Execution time (hr): %ds %dms', hrend[0], hrend[1] / 1000000)
